@@ -1,0 +1,48 @@
+{
+  "name": "nexttalk",
+  "version": "1.0.0",
+  "description": "Nextcloud talk",
+  "category" : "Network",
+  "main": "src/main.js",
+  "build": {
+    "appId": "com.codeillusion.nexttalk",
+    "linux": {
+      "category": "Network",
+      "icon": "src/icons/icon.png"
+    },
+    "mac": {
+      "category": "Social Networking",
+      "icon": "src/icons/icon.png"
+    },
+    "win": {
+      "icon": "src/icons/icon.png"
+    },
+    "directories":{
+      "buildResources":"src/**/*"
+    },
+    "files": [
+      "src"
+    ]
+  },
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app:dir": "electron-builder --dir",
+    "app:dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "nextcloud",
+    "talk"
+  ],
+  "author": "codeillusion.com",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^18.1.0",
+    "electron-builder": "^23.0.3"
+  },
+  "dependencies": {
+    "electron-json-storage": "^4.5.0",
+    "electron-preferences": "^2.6.0"
+  }
+}
